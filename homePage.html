@@ -8,33 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body id="home" data-bs-spy="scroll" data-bs-target=".navbar">
 
-    <!--! NAVBARstart -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">Elite .</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#home">Anasayfa</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">Hakkımızda</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">İletişim</a>
-              </li>
-            </ul>
-            <a href="login.html" class="btn btn-outline-brand  ms-lg-3">Giriş Yap</a>
-          </div>
-        </div>
-      </nav>
-    <!--! NAVBARend -->
+    <div id="navbar-placeholder"></div>
 
     <!--* HEROstart -->
       <section id="hero">
@@ -120,6 +99,10 @@
     <!--! FOOTERend -->
 <!-- Bootstrap JS ve Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<script>
+    $(document).ready(function(){
+        $("#navbar-placeholder").load("navbar.html");
+    });
+    </script>
 </body>
 </html>
