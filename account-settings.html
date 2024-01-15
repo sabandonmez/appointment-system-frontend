@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuaför Randevu Sistemi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body id="home" data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <div id="navbar-placeholder"></div>
+
+    <div class="container login-form-style">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="login-form bg-transparent mt-4 p-4">
+                    <form id="updateUserForm">
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">Adınız</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Soyadınız</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Şifre</label>
+                            <input type="password" class="form-control" id="password" name="password" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Telefon Numarası</label>
+                            <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" >
+                        </div>
+                        <button type"submit" id="updateButton" class="btn btn-primary">Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/accountSettings.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#navbar-placeholder").load("components/navbar.html", function() {
+            if(window.location.href.indexOf("login.html") > -1) {
+                $('#navbar-placeholder .nav-link[href^="#"]').each(function(){
+                    var oldHref = $(this).attr("href");
+                    $(this).attr("href", "homePage.html" + oldHref);
+                });
+            }
+        });
+        $("#footer-placeholder").load("components/footer.html");
+    });
+        </script>
+    </body>

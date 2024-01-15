@@ -22,13 +22,14 @@
             additionalLinks += '<li class="nav-item"><a class="nav-link pt-3" href="randevu-al.html">Randevu Al</a></li>';
             additionalLinks += '<li class="nav-item"><a class="nav-link pt-3" href="customer-appointments.html">Mevcut Randevularım</a></li>';
         } else if (userRole === 'HAIRDRESSER') {
-            additionalLinks += '<li class="nav-item"><a class="nav-link pt-3" href="#appointments">Randevularım</a></li>';
+            additionalLinks += '<li class="nav-item"><a class="nav-link pt-3" href="hairdresser-appointments.html">Randevularım</a></li>';
         } else if (userRole === 'ADMIN') {
             additionalLinks += '<li class="nav-item"><a class="nav-link pt-3" href="admin-panel/admin-home.html">Admin Panel</a></li>';
         }
-
         $('#navbarLinks').append(additionalLinks);
-        $('#navbarLinks').append('<li class="nav-item"><a class="nav-link pt-3">Hesap Ayarları</a></li>');
+        if (userRole !== 'ADMIN') {
+            $('#navbarLinks').append('<li class="nav-item"><a class="nav-link pt-3" href="account-settings.html">Hesap Ayarları</a></li>');
+        }        
         $('#navbarLinks').append('<li class="nav-item"><a href="#" class="nav-link pt-3" id="logoutLink">Çıkış Yap</a></li>');
         $('#loginLink').hide();
     } else {

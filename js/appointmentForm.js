@@ -103,6 +103,10 @@ $('#appointmentForm').submit(function(event) {
     .then(data => {
         console.log('Randevu başarılı:', data);
         $('#successMessage').text('Randevunuz başarı ile oluşturulmuştur.').show();
+        document.getElementById("appointmentForm").reset();
+        setTimeout(function() {
+            window.location.reload(true); 
+        }, 2000);
     })
     .catch(error => {
         console.error('Randevu oluşturma hatası:', error);
