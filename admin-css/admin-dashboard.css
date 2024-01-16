@@ -1,0 +1,27 @@
+.dashboard-card h2{
+    color: black !important;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-green{
+    background-color: rgb(199, 255, 120);
+    border: black .1rem solid;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#kuaförListesi {
+    height: 600px; 
+    overflow-y: scroll;
+    width: 50%; 
+}
+
+#formContainer {
+    width: 50%; 
+}

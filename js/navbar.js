@@ -24,7 +24,7 @@
         } else if (userRole === 'HAIRDRESSER') {
             additionalLinks += '<li class="nav-item"><a class="nav-link pt-3" href="hairdresser-appointments.html">Randevularım</a></li>';
         } else if (userRole === 'ADMIN') {
-            additionalLinks += '<li class="nav-item"><a class="nav-link pt-3" href="admin-panel/admin-home.html">Admin Panel</a></li>';
+            additionalLinks += '<li class="nav-item"><a class="nav-link pt-3" href="admin-home.html">Admin Panel</a></li>';
         }
         $('#navbarLinks').append(additionalLinks);
         if (userRole !== 'ADMIN') {

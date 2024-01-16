@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+   color: white !important;
+   text-decoration: none !important;
+   padding-left: 2rem;
+
+}
+
+.sidebar ul li a:hover{
+    background-color: rgb(207, 255, 145) ;
+    color: black !important;
+    border-radius: .5rem;
+    transition: all ease .5s;
+}
